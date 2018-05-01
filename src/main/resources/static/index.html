@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello WebSocket</title>
+<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/main.css" rel="stylesheet">
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/app.js"></script>
+</head>
+<body>
+	<noscript>
+		<h2 style="color: #ff0000">Seems your browser doesn't support
+			Javascript! Websocket relies on Javascript being enabled. Please
+			enable Javascript and reload this page!</h2>
+	</noscript>
+	<div id="main-content" class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<form class="form-inline">
+					<div class="form-group">
+						<label for="connect">WebSocket connection:</label>
+						<button id="connect" class="btn btn-default" type="submit">Connect</button>
+						<button id="disconnect" class="btn btn-default" type="submit"
+							disabled="disabled">Disconnect</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				Notification Count <span id="notification-size">0</span>
+			</div>
+			<br> <br> <br>
+			<div class="col-md-12">
+				<form class="form-inline">
+					<div class="form-group">
+						<table>
+							<tr>
+								<td><label for="name">Enter your name - </label></td>
+								<td><input type="text" id="name" class="form-control"
+									placeholder="Your name here..."></td>
+							</tr>
+							<tr>
+								<td><label for="name">Enter your company name - </label></td>
+								<td><input type="text" id="company" class="form-control"
+									placeholder="Your company name here..."></td>
+							</tr>
+							<tr>
+								<td><label for="name">Enter your salary - </label></td>
+								<td><input type="text" id="salary" class="form-control"
+									placeholder="Your salary here..."></td>
+							</tr>
+
+							<tr>
+								<td></td>
+								<td>
+									<button id="send" class="btn btn-default" type="submit">Send</button>
+								</td>
+							</tr>
+						</table>
+
+					</div>
+					<br>
+
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<table id="conversation" class="table table-striped">
+					<thead>
+						<tr>
+							<th>Data Table</th>
+						</tr>
+					</thead>
+					<tbody id="greetings">
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
