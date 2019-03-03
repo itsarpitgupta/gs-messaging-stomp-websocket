@@ -1,0 +1,5 @@
+---
+applications:
+- name: web-socket-message
+  path: target\gs-messaging-stomp-websocket-0.1.0.jar
+  memory: 1G
